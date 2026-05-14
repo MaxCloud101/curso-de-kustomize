@@ -37,6 +37,10 @@ project/
         └── kustomization.yaml
 ```
 
+### Ejemplo
+
+Nos colocamos en la carpeta: examples/project1
+
 - Para generar los temaplates lanzamos el comando:
 
 ```
