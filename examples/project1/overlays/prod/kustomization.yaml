@@ -1,0 +1,10 @@
+resources:
+- ../../base
+
+replicas:
+- name: app
+  count: 5
+
+images:
+- name: nginx
+  newTag: "1.27"
