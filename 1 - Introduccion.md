@@ -12,3 +12,29 @@ Con Kustomize puedes:
 - Aplicar parches
 - Crear configuraciones para distintos ambientes (dev, qa, prod)
 - Reutilizar manifests base
+
+## Idea principal
+
+En lugar de usar variables dentro del YAML como hace Helm, Kustomize trabaja con:
+
+- Base → configuración común
+- Overlays → modificaciones por entorno
+
+## Estructura típica
+
+```
+project/
+├── base/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── kustomization.yaml
+│
+└── overlays/
+    ├── dev/
+    │   └── kustomization.yaml
+    │
+    └── prod/
+        └── kustomization.yaml
+```
+
+
