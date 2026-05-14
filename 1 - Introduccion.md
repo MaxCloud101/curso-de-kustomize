@@ -37,4 +37,14 @@ project/
         └── kustomization.yaml
 ```
 
+- Para generar los temaplates lanzamos el comando:
 
+```
+kubectl kustomize overlays/prod
+```
+
+- Para lanzar los templates directamente contra el cluster
+
+```
+kubectl apply -k overlays/prod
+```
