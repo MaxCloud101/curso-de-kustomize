@@ -52,3 +52,37 @@ kubectl kustomize overlays/prod
 ```
 kubectl apply -k overlays/prod
 ```
+
+# Anatomía del kustomization.yaml
+
+Aquí está la anatomía detallada de los componentes clave de un kustomization.yaml:
+
+```
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# 1. Recursos base
+resources:
+  - deployment.yaml
+  - service.yaml
+
+# 2. Metadatos comunes
+namespace: prod
+commonLabels:
+  app: backend
+
+# 3. Generadores
+configMapGenerator:
+  - name: app-config
+    files:
+      - config.properties
+
+# 4. Parches para producción
+patchesStrategicMerge:
+  - patch-replicas.yaml
+
+# 5. Gestión de imágenes
+images:
+  - name: nginx
+    newTag: "1.21"
+```
