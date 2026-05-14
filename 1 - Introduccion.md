@@ -66,10 +66,13 @@ resources:
   - deployment.yaml
   - service.yaml
 
-# 2. Metadatos comunes
+# 2. Transformadores
 namespace: prod
 commonLabels:
   app: backend
+images:
+  - name: nginx
+    newTag: "1.21"
 
 # 3. Generadores
 configMapGenerator:
@@ -80,9 +83,4 @@ configMapGenerator:
 # 4. Parches para producción
 patchesStrategicMerge:
   - patch-replicas.yaml
-
-# 5. Gestión de imágenes
-images:
-  - name: nginx
-    newTag: "1.21"
 ```
