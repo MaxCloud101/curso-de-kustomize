@@ -1,0 +1,21 @@
+resources:
+- deployment.yaml
+- service.yaml
+
+replacements:
+- source:
+    kind: Service
+    name: backend-service
+    fieldPath: metadata.name
+
+  targets:
+  - select:
+      kind: Deployment
+      name: backend
+
+    fieldPaths:
+    - spec.template.spec.containers.0.args.0
+
+    options:
+      delimiter: "="
+      index: 1
