@@ -7,4 +7,4 @@
   value: nginx:1.27
 
 - op: remove
-  path: /metadata/labes
+  path: /metadata/labels
