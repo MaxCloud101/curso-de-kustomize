@@ -13,8 +13,7 @@ labels:
     includeTemplates: true
 
 commonAnnotations:
-  - pairs:
-      environment: dev
+  environment: dev
 
 images:
 - name: nginx
