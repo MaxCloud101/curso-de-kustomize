@@ -20,5 +20,5 @@ images:
   newTag: "1.27"
 
 replicas:
-- name: nginx-app
+- name: app
   count: 5
