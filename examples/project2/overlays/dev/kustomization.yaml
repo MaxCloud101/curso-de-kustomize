@@ -15,3 +15,11 @@ labels:
 annotations:
   - pairs:
       environment: dev
+
+images:
+- name: nginx
+  newTag: "1.27"
+
+replicas:
+- name: nginx-app
+  count: 5
