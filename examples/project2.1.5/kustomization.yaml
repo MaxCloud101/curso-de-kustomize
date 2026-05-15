@@ -1,0 +1,8 @@
+resources:
+- deployment.yaml
+
+patches:
+- target:
+    kind: Deployment
+    name: nginx-app
+  path: deployment-patch.yaml
