@@ -1,0 +1,5 @@
+resources:
+- deployment.yaml
+
+transformers:
+- prefix-transformer.yaml
