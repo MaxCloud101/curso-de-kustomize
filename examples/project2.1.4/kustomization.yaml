@@ -1,5 +1,5 @@
 resources:
 - deployment.yaml
 
-transformers:
-- prefix-transformer.yaml
+patches:
+- path: patch.yaml
