@@ -6,3 +6,8 @@ nameSuffix: -suffix
 
 namespace: dev
 
+labels:
+  - pairs:
+      environment: dev
+    includeSelectors: true
+    includeTemplates: true
