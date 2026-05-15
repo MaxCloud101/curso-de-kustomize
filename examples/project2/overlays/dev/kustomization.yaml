@@ -11,3 +11,7 @@ labels:
       environment: dev
     includeSelectors: true
     includeTemplates: true
+
+annotations:
+  - pairs:
+      environment: dev
