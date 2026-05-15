@@ -3,3 +3,6 @@ resources:
 
 namePrefix: perfix-
 nameSuffix: -suffix
+
+namespace: dev
+
