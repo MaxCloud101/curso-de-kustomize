@@ -12,7 +12,7 @@ labels:
     includeSelectors: true
     includeTemplates: true
 
-annotations:
+commonAnnotations:
   - pairs:
       environment: dev
 
