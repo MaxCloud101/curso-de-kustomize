@@ -1,0 +1,12 @@
+apiVersion: builtin
+kind: PrefixSuffixTransformer
+
+metadata:
+  name: add-prefix
+
+prefix: corp-
+
+fieldSpecs:
+- path: metadata/name
+
+- path: spec/template/metadata/labels/app
