@@ -1,0 +1,5 @@
+helmCharts:
+- name: nginx
+  repo: https://charts.bitnami.com/bitnami
+  version: 15.0.0
+  releaseName: my-nginx
