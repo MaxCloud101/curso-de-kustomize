@@ -1,5 +1,5 @@
 resources:
-- nginx-deployment.yml
+- deployment.yaml
 
 configMapGenerator:
   - name: nginx-config
