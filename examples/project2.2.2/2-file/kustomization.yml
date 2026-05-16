@@ -1,7 +1,0 @@
-resources:
-- deployment.yaml
-
-configMapGenerator:
-  - name: nginx-config
-    files:
-      - nginx.conf
