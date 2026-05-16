@@ -6,3 +6,5 @@ helmCharts:
 
   valuesInline:
     replicaCount: 3
+
+  valuesFile: values.yaml
