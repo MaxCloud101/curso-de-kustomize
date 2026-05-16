@@ -17,6 +17,16 @@ spec:
         image: nginx:1.23.3-alpine-slim
         ports:
         - containerPort: 80
-        envFrom:
-          - configMapRef:
-              name: app-config
+        
+        volumeMounts:
+        - mountPath: /etc/nginx/nginx.conf
+          name: nginx-config
+          subPath: nginx.conf
+
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config
+          items:
+          - key: nginx.conf
+            path: nginx.conf
