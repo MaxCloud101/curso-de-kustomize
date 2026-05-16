@@ -25,3 +25,8 @@ spec:
             - name: secret-volume
               mountPath: /etc/secrets
               readOnly: true
+
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: app-secret

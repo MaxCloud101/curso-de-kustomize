@@ -1,0 +1,7 @@
+resources:
+- deployment.yaml
+
+secretGenerator:
+- name: app-secret
+  envs:
+  - .env
