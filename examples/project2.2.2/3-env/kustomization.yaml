@@ -1,0 +1,7 @@
+resources:
+- deployment.yaml
+
+configMapGenerator:
+- name: app-config
+  envs:
+  - .env

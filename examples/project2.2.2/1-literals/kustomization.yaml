@@ -1,0 +1,13 @@
+resources:
+- deployment.yaml
+
+configMapGenerator:
+- name: app-config
+  literals:
+  - environment=prod
+  - region=us-east-1
+
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    generated: "true"
