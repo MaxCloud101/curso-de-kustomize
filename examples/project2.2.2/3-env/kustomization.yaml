@@ -1,7 +1,7 @@
 resources:
 - deployment.yaml
 
-configMapGenerator:
-- name: app-config
+secretGenerator:
+- name: app-secret
   envs:
   - .env
